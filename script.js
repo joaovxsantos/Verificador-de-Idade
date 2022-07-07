@@ -1,11 +1,13 @@
+//Declaração de variáveis
+
 let submit = document.getElementById("submit");
 let masc = document.getElementById("masc");
 let fem = document.getElementById("fem")
 let img = document.getElementsByTagName("img")[0]
 let div = document.getElementsByTagName("div")[0]
 
-console.log(div)
 
+//Função para o botão submit
 function action() {
 
     let nasc = parseInt(document.getElementById("numero").value);
@@ -17,26 +19,12 @@ function action() {
     if (masc.checked) {
         h2.innerText = `Detectamos homem com ${idade} anos`
         img.src = "./images/h.jpg"
-        
-        
-    } 
+    }
     else if (fem.checked) {
         h2.innerText = `Detectamos mulher com  ${idade}  anos`
         img.src = "./images/m.jpg"
-        
-        
-    }  
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
+//Event Click
 submit.addEventListener("click", action);
